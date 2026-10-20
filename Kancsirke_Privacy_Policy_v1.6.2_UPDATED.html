@@ -1,0 +1,32 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Privacy Policy | Kancsirke Live Chat Translator</title><style>body{margin:0;background:#15141b;color:#efedf4;font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}main{max-width:800px;margin:0 auto;padding:36px 22px 70px}h1,h2{color:#d4b6ff;line-height:1.23}h1{font-size:2rem}h2{margin-top:28px;font-size:1.24rem}a{color:#bd8dff}ul{padding-left:22px}li{margin:5px 0}strong{color:#e6ddf3}code{background:#292436;padding:1px 4px;border-radius:4px}</style></head><body><main><h1>Privacy Policy — Kancsirke Live Chat Translator</h1>
+<p><strong>Effective date: October 20, 2026</strong></p>
+<p>Kancsirke Live Chat Translator (the “Extension”) provides translation and associated language/readability tools for Twitch chat and optional YouTube Live and Kick chat. This policy describes its data practices.</p>
+<h2>1. Developer-controlled data collection</h2>
+<p>Kancsirke does not operate a translation backend, user-account server, telemetry collector or advertisement system for this Extension. The developer does not receive chat logs, API keys, local statistics, glossary entries or browsing history on a Kancsirke server. The Extension does not sell user data or use it for unrelated advertising or profiling. The Extension uses information received from Chrome and Google APIs in accordance with the Chrome Web Store User Data Policy, including its Limited Use requirements.</p>
+<h2>2. Website access</h2>
+<p>The Extension can read visible Twitch chat and chat input on Twitch pages to provide translation. YouTube Live and Kick chat access is optional: the Extension only requests the respective site permission when the user explicitly enables that platform in settings. It does not need access to unrelated websites or a complete browsing-history list. To recognize the current channel and apply channel-specific profiles, the Extension locally stores the active supported livestream page URL, channel identifier and platform/scope. It does not send this active-channel record to a Kancsirke server. All three platforms' chat layouts can change over time.</p>
+<h2>3. Text sent to translation providers</h2>
+<p>When translation is enabled, chat text necessary for the translation is sent directly from the browser to the selected translation provider: keyless Google Translate, Google Cloud Translation, Google Gemini, or DeepL. Text entered into supported chat input fields may also be sent for translation when the user activates outgoing translation. Gemini manual polish and slang-explanation buttons send the clicked source message and any existing translation <strong>to Gemini only when the user clicks</strong> them.</p>
+<p>Those third parties have their own terms, privacy policies, rate limits and data retention practices. Some provider features may require an API key or paid plan.</p>
+<h2>4. API credentials</h2>
+<p>User-supplied Gemini, Google Cloud Translation and DeepL API credentials are stored in <strong>Chrome local extension storage</strong>, not transmitted to a Kancsirke backend, and are excluded from settings exports. The credentials are sent only to the respective external service as needed for authenticated requests. Users should keep keys private and rotate keys if exposed.</p>
+<h2>5. Local settings and storage</h2>
+<p>The Extension stores user preferences, supported platform enablement, UI language and layout, glossary entries, channel profiles, the currently active supported livestream URL/channel identifier, mention keywords, cached translations, local usage statistics and temporary Gemini rate/cooldown state in Chrome extension storage and/or IndexedDB. Duplicate-spam detection and mention matching happen locally. There is no developer analytics upload. Local statistics can be reset and translation cache cleared from the popup. Cached translations expire according to user-selected TTL/LRU rules. Other settings remain until changed or the Extension is removed.</p>
+<h2>6. Optional site permissions</h2>
+<ul>
+<li>Twitch chat: <code>https://*.twitch.tv/*</code> (available at installation).</li>
+<li>YouTube Live chat: <code>https://*.youtube.com/*</code> (opt-in).</li>
+<li>Kick chat: <code>https://*.kick.com/*</code> (opt-in).</li>
+</ul>
+<p>Optional permissions are requested after the user turns on the corresponding platform. The Extension may register and unregister the related site-specific content script; disabling a platform removes its optional permission where supported by Chrome. This is not permission to scan general browsing history.</p>
+<h2>7. Settings synchronization and import/export</h2>
+<p>Non-secret options may use Chrome Sync under the user's Chrome/Google account settings. API keys stay in local extension storage. Settings exports are created only after user action and exclude API keys. Importing a settings file does not automatically grant new site permissions.</p>
+<h2>8. Data retention and security</h2>
+<p>No Extension data is retained on a developer-controlled server. Locally stored data persists until expired, cleared or removed according to the browser and the Extension's settings. Google and DeepL may retain submitted text according to their own policies and the account tier used. HTTPS is used for translation endpoints. Anyone with sufficient access to the browser profile or extension debugging environment may be able to inspect locally stored credentials.</p>
+<h2>9. Children</h2>
+<p>This general-purpose chat translation tool is not directed specifically to children. It does not knowingly collect children's personal information on a Kancsirke server.</p>
+<h2>10. Updates and contact</h2>
+<p>Material changes to data practices will be disclosed in an updated policy and store listing. Project support and contact route: <a href="https://ko-fi.com/kancsirke" rel="noopener noreferrer">https://ko-fi.com/kancsirke</a>.</p>
+<h2>11. Trademarks</h2>
+<p>Independent extension, not affiliated with or endorsed by Twitch, YouTube, Kick, Google, Gemini or DeepL. Their names and trademarks belong to their respective owners.</p>
+</main></body></html>
