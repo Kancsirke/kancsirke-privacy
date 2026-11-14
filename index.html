@@ -1,32 +1,59 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Privacy Policy | Kancsirke Live Chat Translator</title><style>body{margin:0;background:#15141b;color:#efedf4;font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}main{max-width:800px;margin:0 auto;padding:36px 22px 70px}h1,h2{color:#d4b6ff;line-height:1.23}h1{font-size:2rem}h2{margin-top:28px;font-size:1.24rem}a{color:#bd8dff}ul{padding-left:22px}li{margin:5px 0}strong{color:#e6ddf3}code{background:#292436;padding:1px 4px;border-radius:4px}</style></head><body><main><h1>Privacy Policy — Kancsirke Live Chat Translator</h1>
-<p><strong>Effective date: October 20, 2026</strong></p>
-<p>Kancsirke Live Chat Translator (the “Extension”) provides translation and associated language/readability tools for Twitch chat and optional YouTube Live and Kick chat. This policy describes its data practices.</p>
-<h2>1. Developer-controlled data collection</h2>
-<p>Kancsirke does not operate a translation backend, user-account server, telemetry collector or advertisement system for this Extension. The developer does not receive chat logs, API keys, local statistics, glossary entries or browsing history on a Kancsirke server. The Extension does not sell user data or use it for unrelated advertising or profiling. The Extension uses information received from Chrome and Google APIs in accordance with the Chrome Web Store User Data Policy, including its Limited Use requirements.</p>
-<h2>2. Website access</h2>
-<p>The Extension can read visible Twitch chat and chat input on Twitch pages to provide translation. YouTube Live and Kick chat access is optional: the Extension only requests the respective site permission when the user explicitly enables that platform in settings. It does not need access to unrelated websites or a complete browsing-history list. To recognize the current channel and apply channel-specific profiles, the Extension locally stores the active supported livestream page URL, channel identifier and platform/scope. It does not send this active-channel record to a Kancsirke server. All three platforms' chat layouts can change over time.</p>
-<h2>3. Text sent to translation providers</h2>
-<p>When translation is enabled, chat text necessary for the translation is sent directly from the browser to the selected translation provider: keyless Google Translate, Google Cloud Translation, Google Gemini, or DeepL. Text entered into supported chat input fields may also be sent for translation when the user activates outgoing translation. Gemini manual polish and slang-explanation buttons send the clicked source message and any existing translation <strong>to Gemini only when the user clicks</strong> them.</p>
-<p>Those third parties have their own terms, privacy policies, rate limits and data retention practices. Some provider features may require an API key or paid plan.</p>
-<h2>4. API credentials</h2>
-<p>User-supplied Gemini, Google Cloud Translation and DeepL API credentials are stored in <strong>Chrome local extension storage</strong>, not transmitted to a Kancsirke backend, and are excluded from settings exports. The credentials are sent only to the respective external service as needed for authenticated requests. Users should keep keys private and rotate keys if exposed.</p>
-<h2>5. Local settings and storage</h2>
-<p>The Extension stores user preferences, supported platform enablement, UI language and layout, glossary entries, channel profiles, the currently active supported livestream URL/channel identifier, mention keywords, cached translations, local usage statistics and temporary Gemini rate/cooldown state in Chrome extension storage and/or IndexedDB. Duplicate-spam detection and mention matching happen locally. There is no developer analytics upload. Local statistics can be reset and translation cache cleared from the popup. Cached translations expire according to user-selected TTL/LRU rules. Other settings remain until changed or the Extension is removed.</p>
-<h2>6. Optional site permissions</h2>
-<ul>
-<li>Twitch chat: <code>https://*.twitch.tv/*</code> (available at installation).</li>
-<li>YouTube Live chat: <code>https://*.youtube.com/*</code> (opt-in).</li>
-<li>Kick chat: <code>https://*.kick.com/*</code> (opt-in).</li>
-</ul>
-<p>Optional permissions are requested after the user turns on the corresponding platform. The Extension may register and unregister the related site-specific content script; disabling a platform removes its optional permission where supported by Chrome. This is not permission to scan general browsing history.</p>
-<h2>7. Settings synchronization and import/export</h2>
-<p>Non-secret options may use Chrome Sync under the user's Chrome/Google account settings. API keys stay in local extension storage. Settings exports are created only after user action and exclude API keys. Importing a settings file does not automatically grant new site permissions.</p>
-<h2>8. Data retention and security</h2>
-<p>No Extension data is retained on a developer-controlled server. Locally stored data persists until expired, cleared or removed according to the browser and the Extension's settings. Google and DeepL may retain submitted text according to their own policies and the account tier used. HTTPS is used for translation endpoints. Anyone with sufficient access to the browser profile or extension debugging environment may be able to inspect locally stored credentials.</p>
-<h2>9. Children</h2>
-<p>This general-purpose chat translation tool is not directed specifically to children. It does not knowingly collect children's personal information on a Kancsirke server.</p>
-<h2>10. Updates and contact</h2>
-<p>Material changes to data practices will be disclosed in an updated policy and store listing. Project support and contact route: <a href="https://ko-fi.com/kancsirke" rel="noopener noreferrer">https://ko-fi.com/kancsirke</a>.</p>
-<h2>11. Trademarks</h2>
-<p>Independent extension, not affiliated with or endorsed by Twitch, YouTube, Kick, Google, Gemini or DeepL. Their names and trademarks belong to their respective owners.</p>
-</main></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Privacy Policy for Kancsirke Live Chat Translator, a browser extension for translating supported live chats.">
+  <meta name="color-scheme" content="dark light">
+  <title>Privacy Policy | Kancsirke Live Chat Translator</title>
+  <style>
+    :root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.65;color:#eeeaf8;background:#12111a}
+    *{box-sizing:border-box}body{margin:0}main{max-width:860px;margin:0 auto;padding:36px 22px 70px}
+    .head{display:flex;gap:16px;align-items:center;border-bottom:1px solid #373046;padding-bottom:24px;margin-bottom:26px}
+    .mark{display:grid;place-items:center;width:58px;height:58px;border-radius:18px;background:linear-gradient(135deg,#9c61ff,#542ba7);font-size:29px;color:white;font-weight:900}
+    h1{font-size:clamp(26px,5vw,40px);line-height:1.15;margin:0}h2{font-size:22px;margin:33px 0 10px;color:#dfc7ff}p,li{color:#c9c4d5}
+    .note{border:1px solid #67518c;background:#1c1729;border-radius:12px;padding:15px 18px;margin:24px 0;color:#eee}
+    a{color:#d2afff}ul{padding-left:22px}strong{color:#f6f2ff}small{color:#a69db6}.date{color:#c3a0f8}
+    footer{padding-top:20px;border-top:1px solid #373046;margin-top:40px;color:#a69db6}
+  </style>
+</head>
+<body>
+<main>
+  <header class="head"><div class="mark" aria-hidden="true">K</div><div><h1>Privacy Policy</h1><div class="date">Kancsirke Live Chat Translator · Version 1.9.4 · Updated November 14, 2026</div></div></header>
+  <div class="note"><strong>Summary:</strong> Kancsirke reads chat messages on the supported live-streaming sites to translate them. Text you choose to translate is sent over HTTPS to the external translation service you select. Provider API keys, settings, local usage statistics and optional cached translations are stored in your browser profile. The publisher does not operate a server that receives your chat translations.</div>
+  <h2>1. Purpose and scope</h2>
+  <p>Kancsirke Live Chat Translator is a browser extension that translates incoming live chat and, if enabled, outgoing messages on supported streaming sites. Access to YouTube Live and Kick is optional and requested through browser site permissions. The extension's features are intended for translating messages, improving presentation and controlling the translation workflow.</p>
+  <h2>2. Information handled</h2>
+  <ul>
+    <li><strong>Website and chat content:</strong> visible incoming chat messages, including any usernames or other personal information included in the message text, and outgoing text when you request outgoing translation. The extension accesses the specific message content needed for the translation feature.</li>
+    <li><strong>Selected site and channel context:</strong> the current supported chat platform and channel/page URL may be kept locally to identify the current chat and apply saved channel settings. The extension does not use the browser history permission to collect your general browsing history.</li>
+    <li><strong>Provider authentication:</strong> optional API keys supplied by you for translation services. These keys are saved with Chrome's browser-local extension storage and are sent only as needed to authenticate requests to the corresponding provider. API keys are not included in normal settings exports.</li>
+    <li><strong>Local configuration:</strong> selected languages, display mode, provider choice, optional platform permissions, chat/game profile, glossary, per-channel preferences and other settings. Preferences may use Chrome's optional built-in synchronization, according to the relevant browser settings.</li>
+    <li><strong>Local translation information:</strong> optional translated-text cache, request counters, queue status, errors, quota estimates and other extension diagnostics. When caching is enabled, source text and translated text can be saved locally for reuse. Aggregate transport diagnostics are designed not to retain chat text or API keys.</li>
+  </ul>
+  <h2>3. External translation services</h2>
+  <p>When translation is enabled, the extension sends the text requiring translation, requested source/target language and technical request details directly to the selected third-party translation endpoint using HTTPS. In keyless mode, text is sent to a Google translation endpoint. If you select Gemini AI, text is sent to Google's Gemini API, authenticated with the API key you provided. Other optional providers, including DeepL and Google Cloud Translation, receive text and your corresponding credentials only when you choose those modes.</p>
+  <p>When an AI-to-Google fallback option is enabled, text may also be sent to the Google translation endpoint if the selected AI service is unavailable or rate-limited. These services operate under their own privacy policies, retention practices, usage limits and any applicable charges. The publisher cannot control how a chosen third-party provider processes submitted text. Avoid translating sensitive private messages unless you are comfortable sending that text to the selected service.</p>
+  <h2>4. How information is used</h2>
+  <p>Message content is used to return translations and support presentation, caching, terminology rules or manual AI actions. Local diagnostic counters help display rate-limit and queue information, not advertising profiles. The publisher does not sell user data, does not operate a backend receiving translated chat content, and has not added behavioral advertising or third-party analytics to the extension.</p>
+  <h2>5. Limited Use commitment</h2>
+  <p><strong>The use of information received from Google APIs will adhere to the Chrome Web Store User Data Policy, including the Limited Use requirements.</strong> Information accessed through this extension is used only to provide or improve its disclosed translation functionality and closely related operations. It is not used for personalized advertising, sold to data brokers, or transferred to third parties except as needed to deliver the translation you request or as otherwise permitted under that policy.</p>
+  <h2>6. Storage, security and retention</h2>
+  <p>Connection requests to external translation services use HTTPS. Provider keys and local preferences are handled through browser extension storage. Local storage is controlled by your device and Chrome profile; it is not a substitute for a dedicated encrypted password vault. Cached translations and diagnostics can persist in the browser until they expire, are cleared using available extension controls, or are removed with the extension/profile. Streaming chat elements that remain on a web page are also subject to the streaming site's own behavior and retention.</p>
+  <p>The publisher does not set a separate retention period for data held by external translation providers. Consult those providers directly for their policies. Browser synchronization, if enabled for non-secret preferences, follows your Chrome settings.</p>
+  <h2>7. Your choices</h2>
+  <ul>
+    <li>Use keyless translation without providing an AI API key, or select an optional provider yourself.</li>
+    <li>Enable or disable the extension and choose when outgoing messages are translated.</li>
+    <li>Grant or revoke optional YouTube Live and Kick access in Chrome's extension controls.</li>
+    <li>Turn translation caching on or off, clear supported cached data and reset local statistics in the extension.</li>
+    <li>Remove stored keys in extension settings, remove the extension or clear its browser storage to remove locally stored data. Browser-synced preferences may require clearing Chrome synchronization separately.</li>
+  </ul>
+  <h2>8. Children, platform content and trademarks</h2>
+  <p>The extension is not designed to gather information about children. It translates content displayed in third-party live chats, and does not control what chat participants write. Kancsirke is an independent extension, not an official product of or endorsed by any streaming platform or translation provider.</p>
+  <h2>9. Changes and contact</h2>
+  <p>This policy may be updated when the extension or its data practices change. The current version will be published at this URL. For questions, contact the publisher through the Chrome Web Store listing's publisher/support information.</p>
+  <footer><small>Kancsirke Live Chat Translator — privacy information. This page itself does not use analytics, cookies or third-party scripts.</small></footer>
+</main>
+</body>
+</html>
